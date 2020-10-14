@@ -74,6 +74,9 @@ public class WhenCreatingObjects {
         assertEquals(fido.play(), "plays with bone");
         assertEquals(rusty.play(), "runs in wheel");
 
+        System.out.println("Felix " + felix.play());
+        System.out.println("Fido  " + fido.play());
+        System.out.println("Rusty  " + rusty.play());
     }
 
 }

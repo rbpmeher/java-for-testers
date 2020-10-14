@@ -1,20 +1,18 @@
 package com.serenitydojo;
 
-public class pet {
-    private int age;
+public abstract class Pet {
     private String name;
+    private int age;
 
-    public pet(String name, int age){
+
+    public Pet(String name) {
         this.name = name;
-        this.age = age;
     }
-
     public String getName() {
         return name;
     }
 
-    public int getAge() {
-        System.out.println(name+" Age is: "+ age);
-        return age;
-    }
+    public String goForWalks() { return "walk walk walk"; }
+    public abstract String makeNoise();
+    public abstract String play();
 }

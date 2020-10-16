@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import static com.serenitydojo.model.AnimalType.*;
+import static com.serenitydojo.model.FoodType.*;
 
 public class WhenFeedingTheAnimals {
 
@@ -16,7 +17,8 @@ public class WhenFeedingTheAnimals {
 
         FoodType food = feeder.feeds(CAT, false);
 
-        Assert.assertEquals(FoodType.TUNA, food);
+        Assert.assertEquals(TUNA, food);
+        System.out.println("cats fed with food: "+ food);
     }
 
     @Test
@@ -25,7 +27,8 @@ public class WhenFeedingTheAnimals {
 
         FoodType food = feeder.feeds(HAMSTER, false);
 
-        Assert.assertEquals(FoodType.CABBAGE, food);
+        Assert.assertEquals(CABBAGE, food);
+        System.out.println("Hamster fed with food: "+ food);
     }
 
     @Test
@@ -34,7 +37,8 @@ public class WhenFeedingTheAnimals {
 
         FoodType food = feeder.feeds(DOG, false);
 
-        Assert.assertEquals(FoodType.DOG_FOOD, food);
+        Assert.assertEquals(DOG_FOOD, food);
+        System.out.println("Dog fed with food: "+ food);
     }
 
     @Test
@@ -43,7 +47,8 @@ public class WhenFeedingTheAnimals {
 
         FoodType food = feeder.feeds(CAT, true);
 
-        Assert.assertEquals(FoodType.SALMON, food);
+        Assert.assertEquals(SALMON, food);
+        System.out.println("cats fed with Premium food: "+ food);
     }
 
     @Test
@@ -52,7 +57,8 @@ public class WhenFeedingTheAnimals {
 
         FoodType food = feeder.feeds(DOG, true);
 
-        Assert.assertEquals(FoodType.DELUXE_DOG_FOOD, food);
+        Assert.assertEquals(DELUXE_DOG_FOOD, food);
+        System.out.println("Dog fed with Premium food: "+ food);
     }
 
     @Test
@@ -61,7 +67,8 @@ public class WhenFeedingTheAnimals {
 
         FoodType food = feeder.feeds(HAMSTER, true);
 
-        Assert.assertEquals(FoodType.LETTUCE, food);
+        Assert.assertEquals(LETTUCE, food);
+        System.out.println("Hamster fed with Premium food: "+ food);
     }
 
 }
